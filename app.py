@@ -43,20 +43,20 @@ app.register_blueprint(dog, url_prefix = '/api/v1/dogs')
 def index():
     return 'Hola biznatches'
 
-#how to pass params to the route/url pattern: put param in < > and also pass it into function
-@app.route('/sayhello/<name>')
-#pass your function the param from url pattern
-def say_hello(name):
+# #how to pass params to the route/url pattern: put param in < > and also pass it into function
+# @app.route('/sayhello/<name>')
+# #pass your function the param from url pattern
+# def say_hello(name):
 
-    #declare a variable to catch a value that is passed to params after ? #pass get the key and it will save the value pair
-    band = request.args.get('bandname')
-    #whatever is passed will return in json format
-    return jsonify(
-        msg = 'Hello',
-        band_name = band,
-        status = 200,
-        list = ['Franklin', 'Delphene', 'Braxton'],
-        artist = 'Ted '+ name)
+#     #declare a variable to catch a value that is passed to params after ? #pass get the key and it will save the value pair
+#     band = request.args.get('bandname')
+#     #whatever is passed will return in json format
+#     return jsonify(
+#         msg = 'Hello',
+#         band_name = band,
+#         status = 200,
+#         list = ['Franklin', 'Delphene', 'Braxton'],
+#         artist = 'Ted '+ name)
 
 
 #set up to start listening for requests
